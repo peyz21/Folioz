@@ -1,8 +1,8 @@
 import {
-    mobile,
-    backend,
-    creator,
-    web,
+    cloud,
+    fullstack,
+    ai,
+    system,
     javascript,
     typescript,
     html,
@@ -31,8 +31,8 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "projects",
+      title: "Projects",
     },
     {
       id: "contact",
@@ -42,20 +42,20 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
-      icon: web,
+      title: "Cloud Computing",
+      icon: cloud,
     },
     {
-      title: "React Native Developer",
-      icon: mobile,
+      title: "Full Stack Developement",
+      icon: fullstack,
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+      title: "System Design",
+      icon: system,
     },
     {
-      title: "Content Creator",
-      icon: creator,
+      title: "Artificial Intelligence",
+      icon: ai,
     },
   ];
   
