@@ -1,2 +1,2 @@
 # folioz
-personal portfolio
+personal portfolio website
