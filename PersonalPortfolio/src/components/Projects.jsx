@@ -35,12 +35,12 @@ const ProjectCard = ({
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="grey-to-dark-green-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              className="bg-tertiary w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img
                 src={github}
                 alt="source code"
-                className="w-1/2 h-1/2 object-contain"
+                className="w-2/3 h-2/3 object-contain"
               />
             </div>
           </div>
@@ -84,7 +84,7 @@ const Projects = () => {
           tools used. This portfolio showcases my ability to lead and
           collaborate effectively, implement agile methodologies, and tackle
           complex challenges, underlining my commitment to practical, impactful
-          solutions in the technology domain.
+          solutions in the technology domain. <span className="text-white">Click on the Github icon to view the source code!</span>
         </motion.p>
       </div>
 

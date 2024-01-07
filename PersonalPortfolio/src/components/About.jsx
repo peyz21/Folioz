@@ -24,7 +24,7 @@ const About = () => {
         understanding the latest trends; it's about diving deep, challenging the
         norms, and creatively solving complex puzzles. I'm excited about
         contributing to transformative projects that reshape our digital
-        experiences and leave a lasting impact in the tech world.
+        experiences and leave a lasting impact in the tech world.<span className="text-white"> This is an interactable Portfolio, most 3d objects are clickable and movable!</span>
       </motion.p>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}

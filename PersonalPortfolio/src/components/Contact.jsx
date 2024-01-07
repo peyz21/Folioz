@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { github, linkedin } from "../assets";
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -16,6 +17,7 @@ const scrollToTop = () => {
 
 const Contact = () => {
   const [showScrollTopButton, setShowScrollTopButton] = useState(false);
+  const [loading, setLoading] = useState(false);
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -36,8 +38,6 @@ const Contact = () => {
     return () => window.removeEventListener("scroll", checkScrollTop);
   }, [showScrollTopButton]);
 
-  const [loading, setLoading] = useState(false);
-
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
@@ -48,11 +48,10 @@ const Contact = () => {
     });
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID)
+    console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID);
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -69,7 +68,9 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you! I will get back to you after reviewing your message.");
+          alert(
+            "Thank you! I will get back to you after reviewing your message."
+          );
 
           setForm({
             name: "",
@@ -101,6 +102,25 @@ const Contact = () => {
         className="flex-[0.75] bg-black-100 p-8 rounded-[5px]"
       >
         <h3 className={styles.sectionHeadText}>Get In Touch.</h3>
+
+        <div className="flex justify-between items-center mb-1 mt-5">
+          <a
+            href="https://www.linkedin.com/in/peiman-zhiani/" // Replace with your LinkedIn URL
+            className="flex items-center justify-center bg-black hover:bg-opacity-80 text-white font-medium py-2 px-4 rounded"
+            style={{ width: "49%" }}
+          >
+            <img src={linkedin} alt="LinkedIn" className="w-4 h-4 mr-2 mb-1" />
+            LinkedIn
+          </a>
+          <a
+            href="https://www.github.com/peyz21" 
+            className="flex items-center justify-center bg-black hover:bg-opacity-80 text-white font-medium py-2 px-4 rounded"
+            style={{ width: "49%" }}
+          >
+            <img src={github} alt="GitHub" className="w-6 h-6 mr-2" />
+            GitHub
+          </a>
+        </div>
 
         <form
           ref={formRef}

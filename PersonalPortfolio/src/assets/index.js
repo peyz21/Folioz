@@ -4,6 +4,7 @@ import system from "./system.png";
 import ai from "./ai.png";
 import cloud from "./cloud.png";
 import github from "./github.png";
+import linkedin from "./LinkedIn.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -61,5 +62,6 @@ export {
   codegram,
   ficapp,
   puzzle,
-  AWS
+  AWS,
+  linkedin
 };
