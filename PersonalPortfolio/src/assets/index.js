@@ -9,17 +9,18 @@ import close from "./close.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
+import Java from "./tech/Java.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
+import Angular from "./tech/Angular.png";
+import Python from "./tech/Python.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import PostgreSQL from "./tech/PostgreSQL.png";
+import AWS from "./tech/AWS.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -28,7 +29,7 @@ import tesla from "./company/tesla.png";
 
 import codegram from "./codegram.png";
 import ficapp from "./ficapp.png";
-import tripguide from "./tripguide.png";
+import puzzle from "./puzzle.png";
 
 
 export {
@@ -42,22 +43,23 @@ export {
   close,
   css,
   docker,
-  figma,
+  Java,
   git,
   html,
   javascript,
   mongodb,
   nodejs,
   reactjs,
-  redux,
-  tailwind,
+  Angular,
+  Python,
   typescript,
-  threejs,
+  PostgreSQL,
   meta,
   shopify,
   starbucks,
   tesla,
   codegram,
   ficapp,
-  tripguide,
+  puzzle,
+  AWS
 };

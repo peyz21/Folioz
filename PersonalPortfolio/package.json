@@ -1,5 +1,5 @@
 {
-  "homepage": "http://peyz21.github.io/Folioz/PersonalPortfolio",
+  "homepage": "https://peyz21.github.io/folioz/PersonalPortfolio/",
   "name": "personalportfolio",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

@@ -48,10 +48,11 @@ const Contact = () => {
     });
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+    console.log(import.meta.env.VITE_APP_EMAILJS_SERVICE_ID)
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -60,7 +61,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "peiman zhiani",
           from_email: form.email,
-          to_email: "pza42@sfu.ca",
+          to_email: import.meta.env.VITE_APP_EMAILJS_EMAIL,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -68,7 +69,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert("Thank you! I will get back to you after reviewing your message.");
 
           setForm({
             name: "",
@@ -80,7 +81,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          alert("There was an error sending your email. Please try again.");
         }
       );
   };
@@ -97,7 +98,7 @@ const Contact = () => {
       </motion.div>
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
+        className="flex-[0.75] bg-black-100 p-8 rounded-[5px]"
       >
         <h3 className={styles.sectionHeadText}>Get In Touch.</h3>
 
@@ -113,8 +114,8 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="adam Smith"
-              className="bg-secondary py-4 px-6 placeholder:text-gray-600 text-white rounded-lg outline-none border-none font-medium"
+              placeholder="Adam Smith"
+              className="bg-secondary py-4 px-6 placeholder:text-gray-600 text-white rounded-[5px] outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -125,7 +126,7 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="abc@zmail.com"
-              className="bg-secondary py-4 px-6 placeholder:text-gray-600 text-white rounded-lg outline-none border-none font-medium"
+              className="bg-secondary py-4 px-6 placeholder:text-gray-600 text-white rounded-[5px] outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
@@ -136,13 +137,13 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Hey, Your website rocks!"
-              className="bg-secondary py-4 px-6 placeholder:text-gray-600 text-white rounded-lg outline-none border-none font-medium"
+              className="bg-secondary py-4 px-6 placeholder:text-gray-600 text-white rounded-[5px] outline-none border-none font-medium"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-secondary py-3 px-12 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="bg-secondary py-3 px-12 rounded-[5px] outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
             {loading ? "Sending..." : "Send"}
           </button>
@@ -151,7 +152,7 @@ const Contact = () => {
       {showScrollTopButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-green text-white font-bold py-2 px-4 rounded-lg flex items-center justify-center"
+          className="fixed bottom-4 right-4 bg-green text-white font-bold py-2 px-4 rounded-[5px] flex items-center justify-center"
           style={{ width: "40px", height: "40px" }}
         >
           <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-b-[10px] border-b-white"></div>
